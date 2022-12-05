@@ -1,0 +1,317 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+body {
+    background: linear-gradient(180deg, #243453 0%, #1a2741 48.39%, #1a2333 100%);
+    background-size: cover;
+    overflow-x: hidden;
+  }
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    backdrop-filter: blur(2px) saturate(200%);
+    -webkit-backdrop-filter: blur(2px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    color: #fff;
+   }
+   .nav-links a {
+    color: #fff;
+   }
+   /* LOGO */
+   .logo {
+    position: relative;
+    z-index: 100;
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    backdrop-filter: blur(2px) saturate(200%);
+    -webkit-backdrop-filter: blur(2px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 0px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+   /* DROPDOWN MENU */
+   .services {
+    z-index: 10000;
+    position: relative; 
+   }
+
+.dropdown {
+    z-index: 10000;
+    top: 100%;
+    left: -7px;
+    right: -7px;
+    background: url(dark-night-sky-stars.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+.dropdown li {
+    text-align: center;
+    position: relative;
+    z-index: 10000;
+}
+.dropdown li:hover {
+    position: relative;
+    z-index: 10000;
+    border-radius: 0px;
+}
+.services:hover .dropdown {
+    display: block;
+}
+   /*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   /* APPLYING MEDIA QUERIES */
+   @media (max-width: 768px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color:teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+   }
+   .menu li:hover {
+    display: inline-block;
+    transition: 0.3s ease;
+   }
+   .menu li + li {
+    margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+    display: block;
+   }
+   .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+   }
+   }
+.box-style {
+    backdrop-filter: blur(2px) saturate(200%);
+    -webkit-backdrop-filter: blur(2px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow:  18px 18px 60px #bebebe36,
+    -18px -18px 60px #ffffff1e;
+}
+.innhold {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 2% 2% 2%;
+    margin: 10% 10% 5% 10%;
+    position: relative;
+    z-index: 1;
+}
+.innhold > div{
+    flex: 1;
+}
+.innhold > .innholdbox > .innholdcol > h1 {
+    font-size: 3vw;
+    color: rgb(204, 243, 253);
+}
+.innhold > .innholdbox > .innholdcol > p {
+    font-size: 2vw;
+    flex: 1;
+    color: #eba1e7;
+}
+.imgbox {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    opacity: 75%;
+}
+.imgbox-box {
+    border-radius: 5px;
+    box-shadow:  18px 18px 60px #bebebe36,
+             -18px -18px 60px #ffffff1e;
+}
+.innholdbox {
+    display: flex;
+}
+.innholdcol {
+    flex: 1;
+}
+
+body{ min-height:100vh; margin:0; position:relative; }
+header{ min-height:50px; background:lightcyan; }
+footer{ background:PapayaWhip; }
+
+/* Trick: */
+body {
+  position: relative;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 50px; /* Set same as footer's height */
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom p a{
+  color:#44bae8;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.footer-menu{
+  float: right;
+
+}
+.footer-menu ul{
+  display: flex;
+}
+.footer-menu ul li{
+    padding-right: 10px;
+    display: block;
+}
+.footer-menu ul li a{
+  color: #cfd2d6;
+  text-decoration: none;
+}
+.footer-menu ul li a:hover{
+  color: #27bcda;
+}
+.footer-bottom-text {
+    text-decoration: underline;
+    pointer-events: none;
+    cursor: default;
+}
+      
+@media (max-width:500px) {
+    .footer-menu ul{
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:768px) {
+    .innhold {
+        margin: 0;
+        padding: 0;
+        transition: all 300ms ease;
+    }
+    .innhold > .innholdbox > .innholdcol > h1 {
+        font-size: 6vw;
+        color: rgb(204, 243, 253);
+    }
+    .innhold > .innholdbox > .innholdcol > p {
+        font-size: 4vw;
+        flex: 1;
+        color: #eba1e7;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #076585;
+    background: -webkit-linear-gradient(#076585, rgb(147, 225, 255));
+    background: linear-gradient(#076585, rgb(147, 225, 255));
+    border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+    background: url(dark-night-sky-stars.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+::-webkit-scrollbar-button {
+    display: block;
+    background-color: #000000;
+    background-repeat: no-repeat;   
+    background-size: 50%;
+    background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7e/Chevron-up.svg');   
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    display: none;
+}
+
+::-webkit-scrollbar-button:vertical:end:decrement {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ee/Chevron-down.svg');   
+}
